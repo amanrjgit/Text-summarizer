@@ -1,0 +1,9 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pydantic>=1.8.0
+transformers>=4.11.3
+torch>=1.9.0
+python-multipart>=0.0.5
+pytest>=7.4.4
+pytest-cov>=2.12.1
+httpx>=0.18.2
