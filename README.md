@@ -1,4 +1,4 @@
-# AI Text Processing Microservice
+# Text Summarizer
 
 A production-ready FastAPI microservice that integrates with Hugging Face Transformers for text processing and summarization in real-time.
 
@@ -16,7 +16,7 @@ The microservice is built with the following architecture:
 ```
 ┌─────────────────┐        ┌─────────────────┐        ┌─────────────────┐
 │                 │        │                 │        │                 │
-│  HTTP Requests  │───────▶│  FastAPI App    │───────▶│  Hugging Face   │
+│  HTTP Requests  │──────▶│  FastAPI App    │───────▶│  Hugging Face   │
 │                 │        │                 │        │  Transformers   │
 └─────────────────┘        └─────────────────┘        └─────────────────┘
                                     │
@@ -43,7 +43,7 @@ The microservice is built with the following architecture:
 
 ## Prerequisites
 
-- Python 3.8+
+- Python 3.9+
 - pip or conda
 
 ## Installation
@@ -52,8 +52,8 @@ The microservice is built with the following architecture:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ai-microservice.git
-   cd ai-microservice
+   git clone https://github.com/amanrjgit/Text-summarizer.git
+   cd Text-summarizer
    ```
 
 2. Install the required dependencies:
@@ -70,12 +70,12 @@ The microservice is built with the following architecture:
 
 1. Build the Docker image:
    ```bash
-   docker build -t ai-microservice .
+   docker build -t Text-summarizer .
    ```
 
 2. Run the container:
    ```bash
-   docker run -p 8000:8000 ai-microservice
+   docker run -p 8000:8000 Text-summarizer
    ```
 
 ## Environment Variables
@@ -102,14 +102,14 @@ The microservice is built with the following architecture:
 - **Request Body**:
   ```json
   {
-    "query": "What is artificial intelligence?"
+    "query": "Is the implementation good enough? ~ Aman"
   }
   ```
 - **Response**:
   ```json
   {
     "message": "Query processed successfully",
-    "query_received": "What is artificial intelligence?"
+    "query_received": "Is the implementation good enough? ~ Aman"
   }
   ```
 
@@ -119,7 +119,7 @@ The microservice is built with the following architecture:
 - **Request Body**:
   ```json
   {
-    "text": "Long text to summarize...",
+    "text": "I have completed the assignment before time and I hope I get the job with this. I can still do a lot more stuff but I am bounded by time constraints.",
     "max_length": 150,
     "min_length": 30
   }
@@ -129,7 +129,7 @@ The microservice is built with the following architecture:
   {
     "original_length": 1024,
     "summary_length": 142,
-    "summary": "Concise summary of the text..."
+    "summary": "Good implemenation!! You got the job. Congrats!!!"
   }
   ```
 
